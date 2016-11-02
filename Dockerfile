@@ -3,7 +3,7 @@ MAINTAINER Danil Ivanov
 
 ENV PYTHONBUFFERED 1
 
-ENV BOT_LOCAL_SRC ./
+ENV BOT_LOCAL_SRC ./bot/
 ENV BOT_HOME /home/bot
 ENV BOT_SRC /home/bot/app/src
 
