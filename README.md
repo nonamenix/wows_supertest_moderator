@@ -4,6 +4,5 @@ Telegram bot that send notifications to moderator when users use media content, 
 
 ## Docker Image
 
-[![](https://images.microbadger.com/badges/image/nonamenix/wows_supertest_moderator.svg)](https://microbadger.com/images/nonamenix/wows_supertest_moderator "Get your own image badge on microbadger.com")
-
 [![](https://images.microbadger.com/badges/version/nonamenix/wows_supertest_moderator.svg)](https://microbadger.com/images/nonamenix/wows_supertest_moderator "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/nonamenix/wows_supertest_moderator.svg)](https://microbadger.com/images/nonamenix/wows_supertest_moderator "Get your own image badge on microbadger.com")
