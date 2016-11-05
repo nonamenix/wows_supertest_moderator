@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 ch = logging.StreamHandler()
 logger.addHandler(ch)
 
-moderator_id = "-168255868"
+moderator_id = os.environ['BOT_NOTIFICATION_USER_ID']
 
 bot = Bot(
     api_token=os.environ["BOT_TOKEN"])
