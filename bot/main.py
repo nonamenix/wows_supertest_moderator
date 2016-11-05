@@ -57,6 +57,11 @@ async def handle(chat, media):
     await chat.reply(text)
 
 
+@bot.command("/ping")
+async def ping(chat, match):
+    await chat.send_text('pong')
+
+
 @bot.command(".*")
 async def check_mats(chat, match):
     if len(matfilter(match.group(0))):
