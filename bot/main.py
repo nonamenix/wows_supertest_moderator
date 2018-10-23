@@ -15,6 +15,7 @@ ch = logging.StreamHandler()
 logger.addHandler(ch)
 
 moderator_id = os.environ['BOT_NOTIFICATION_USER_ID']
+check_abuse = 'BOT_CHECK_ABUSE' in os.environ
 
 bot = Bot(
     api_token=os.environ["BOT_TOKEN"])
@@ -61,19 +62,11 @@ async def handle(chat, media):
 async def ping(chat, match):
     await chat.send_text('pong')
 
-
-@bot.command(".*")
-async def check_mats(chat, match):
-    if len(matfilter(match.group(0))):
-        await notify_moderator(chat)
-        # await chat.reply('В вашем сообщение присутствует брань. Мана-мана.')
-
-
-@bot.default
-async def default(chat, match):
-    await chat.send_text(
-        'Да, капитан!?'
-    )
+if CHECK_ABUSE: 
+    @bot.command(".*")
+    async def check_mats(chat, match):
+        if len(matfilter(match.group(0))):
+            await notify_moderator(chat)
 
 
 if __name__ == "__main__":
